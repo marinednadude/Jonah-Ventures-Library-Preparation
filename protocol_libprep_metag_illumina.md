@@ -34,9 +34,9 @@ pcr2_method_additional:
 sequencing_location: Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core
 platform: ILLUMINA
 instrument: Illumina NovaSeq 6000
-seq_kit: Illumina NovaSeq SP Reagent Kit v1.5 (500 cycles) (cat_no:20028402)
+seq_kit: Illumina NovaSeq SP Reagent Kit v1.5 (500 cycles) (Cat_No:20028402)
 lib_layout: paired end
-lib_screen: The library was purified using a Exo1/SAP PCR Amplicon Clean Up prior to pcr2, noramlized with Cytiva SpeedBead magnetic carboxylate modified particles (cat_no:45152105050250), pooled ysing 5 µL of product, quantified using a Qubit (Invitrogen) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell
+lib_screen: PCR1 product was purified using an Exo1/SAP PCR Amplicon Clean Up before PCR2, then barcoded using Two-Step Barcoding PCR with Illumina Nextera Unique Dual Indices, normalized with Cytiva SpeedBead magnetic carboxylate modified particles (Cat_No:45152105050250), pooled using 5 µL of product, quantified using a Qubit (ThermoFisher Scientific) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 800
@@ -53,7 +53,7 @@ seq_method_additional: PhiX was spiked in at 35%
 ### Minimum Information about an Omics Protocol (MIOP)
 
 - MIOP terms are listed in the YAML frontmatter of this page.
-- See <https://github.com/BeBOP-OBON/miop/blob/main/model/schema/terms.yaml> for list and definitions.
+- See <https://github.com/BeBOP-OBON/miop/blob/main/model/schema/terms.yaml> for the list and definitions.
 
 ### Making eDNA FAIR (FAIRe)
 
@@ -135,14 +135,14 @@ These external protocols use the same general Illumina Nextera Unique Dual Index
 
 ### Summary
 
-This is protocol used by [Jonah Ventures](https://jonahventures.com/) to prepare next generation amplicon/metabarcoding sequencing libraries from NOAA PMEL OME PCR product. PCR plates are first cleaned using Exo1/SAP, then barcoded using unique, sample specific Illumina Nextera Unique Dual Indices (2x 10bp), then pooled using mag-bind normalization, and the sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles) (cat# 20028402). Importantly, this standard two steo PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,071 total libraries with far greater than 100K sequence read depth.
+This protocol is used by [Jonah Ventures](https://jonahventures.com/) to prepare next-generation amplicon/metabarcoding sequencing libraries from  NOAA PMEL OME PCR1 products. PCR plates are first cleaned using Exo1/SAP, then barcoded using unique, sample-specific Illumina Nextera Unique Dual Indices (2x 10bp), pooled using mag-bind normalization, and sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles) (cat# 20028402). Importantly, this standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,071 total libraries with far greater than 100K sequence read depth.
 
 ### Method description and rationale
 
-Advantages to this protocol include ease of use leveraging commercially available Illumina sequencing kits and indices as well as the ability to sequence across the tree of life with a multi-marker approach with up to 384 samples x 8 markers simultaneously. This protocol's steps include: _PCR Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR Normalization and Pooling_ and _Sequencing_. 
-NOAA PMEL OME conducts eDNA sample collection, filtration, extraction, and PCR amplification prior to this protocol (See our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Plates of PCR product are shipped on dry ice to Jonah Ventures in Boulder, CO, USA where they are processed using this protocol by the sequencing company. PCR product is first cleaned to remove excess primers and dNTPs using an Exo1/SAP clean up protocol. Cleaned PCR product is then indexed through a second barcoding PCR step using Illumina Nextera UDI indices. Indexed PCR product is then normalized using mag-bind normalization and then pooled by even volume (and concentration) into a final pooled library. The library is then sequenced on an Illumina NovaSeq 6000 at the Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core using the SP Reagent Kit v1.5 (500 cycles). Raw sequence data are demultiplexed by the sequencing core. And downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits and indices, as well as the ability to sequence across the tree of life with a multi-marker approach with up to 384 samples x 8 markers simultaneously. This protocol's steps include: _PCR Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR Normalization and Pooling_, and _Sequencing_. 
+NOAA PMEL OME conducts eDNA sample collection, filtration, extraction, and PCR1 amplification before this protocol (See our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Plates of PCR1 product are shipped on dry ice to Jonah Ventures in Boulder, CO, USA, where they are processed using this protocol by the sequencing company. PCR1 product is first cleaned to remove excess primers and dNTPs using an Exo1/SAP cleanup protocol. Cleaned PCR1 product is then indexed through a second barcoding PCR step using Illumina Nextera UDI indices. Indexed PCR2 product is then normalized using mag-bind normalization and then pooled by even volume (and concentration) into a final pooled library. The library is then sequenced on an Illumina NovaSeq 6000 at the Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core using the SP Reagent Kit v1.5 (500 cycles). The sequencing core demultiplexes raw sequence data. And downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
-This protocol is less detailed than our typical protocols as we do not conduct this protocol ourselves. However, we capture the necessary [FAIRe](https://fair-edna.github.io/) relevant information.
+This protocol is less detailed than our typical protocols, as we do not conduct this protocol ourselves. However, we capture the necessary [FAIRe](https://fair-edna.github.io/) relevant information.
 
 ### Spatial coverage and environment(s) of relevance
 
@@ -162,7 +162,7 @@ Molecular biology training (including, at a minimum, sterile technique, pipettin
 
 ### Time needed to execute the procedure
 
-This protocol takes about 4-5 hours to execute per plate. There is a safe-stopping point after the PCR Amplicon Cleanup, Indexing PCR, Normalization, and Pooling steps. Across all stopping points, the plate can be stored for up to a week at 4°C with storage at -20˚C for up to 6 months.
+This protocol takes about 4-5 hours to execute per plate. There is a safe-stopping point after the PCR Amplicon Cleanup, Indexing PCR, Normalization, and Pooling steps. Across all stopping points, the plate can be stored for up to a week at 4°C, with storage at -20˚C for up to 6 months.
 
 ## EQUIPMENT
 
@@ -184,8 +184,8 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Aluminum Foil Sealing Tape | AlumaSeal II Sealing Foils for PCR and Cold Storage | VWR | 7 | Can be substituted with generic | 
 | 8-Strip Tubes | 0.2 mL 8-Strip PCR Tubes | Generic Brand | 5 | tubes without caps attached are better |
 | Microcentrifuge Tubes | 2.0 mL Microcentrifuge Tube | Generic Brand | 8 | Can be substituted with generic|
-| 200 μL pipette tips  | TipOne RPT filter tips 200 μL graduated| USA Scientific |4 | Can be subsituted with generic - must be sterile and filtered |
-| 10 μL pipette tips  | TipOne RPT filter tips 10 μL graduated | USA Scientific | 96 | Can be subsituted with generic - must be sterile and filtered |
+| 200 μL pipette tips  | TipOne RPT filter tips 200 μL graduated| USA Scientific |4 | Can be substituted with generic - must be sterile and filtered |
+| 10 μL pipette tips  | TipOne RPT filter tips 10 μL graduated | USA Scientific | 96 | Can be substituted with generic - must be sterile and filtered |
 | 25 mL Trough | Reagent Reservoirs - 25 mL Disposable | ThermoFisher Scientific | 1 | (box)  Can be substituted with generic |
 | Gloves | Nitrile Gloves, Exam Grade, Powder-free | ULINE | 1 | (box) Can be substituted with generic |
 | Kim Wipes | KimWipe Delicate Task Wipers | KimTech | 1 | (box) Can be substituted with generic |
@@ -193,8 +193,8 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | 80% Ethanol | Molecular biology grade ethanol |
 | Exo1/SAP | ExoSAP-IT PCR Product Cleanup Reagent | ThermoFisher Scientific | 1 | (mL vial) is 500 reactions |
 | Nuclease-free water | Nuclease-Free Water (not DEPC-Treated) | ThermoFisher Scientific | 1 | (mL vial) |
-| Illumina Unique Dual Indexes Sets A, B, C, D | Illumina Unique Dual Indexes| Illumina | 1 | Illumina® DNA/RNA UD Indexes Set A, Tagmentation (96 Indexes, 96 Samples) 20091654;Illumina® DNA/RNA UD Indexes Set B, Tagmentation (96 Indexes, 96 Samples) 20091656; Illumina® DNA/RNA UD Indexes Set C, Tagmentation (96 Indexes, 96 Samples) 20091658; Illumina® DNA/RNA UD Indexes Set D, Tagmentation (96 Indexes, 96 Samples) 20091660 |
-| Promega Master mix | Premixed 2X solution of Taq DNA Polymerase, dNTPs and Reaction Buffer | Promega | 1 | (kit) Master Mix includes Taq DNA polymerase, dNTPs, MgCl2 and reaction buffer |
+| Illumina Unique Dual Indexes Sets A, B, C, D | Illumina Unique Dual Indexes| Illumina | 1 | Illumina® DNA/RNA UD Indexes Set A, Tagmentation (96 Indexes, 96 Samples) 20091654; Illumina DNA/RNA UD Indexes Set B, Tagmentation (96 Indexes, 96 Samples) 20091656; Illumina® DNA/RNA UD Indexes Set C, Tagmentation (96 Indexes, 96 Samples) 20091658; Illumina® DNA/RNA UD Indexes Set D, Tagmentation (96 Indexes, 96 Samples) 20091660 |
+| Promega Master mix | Premixed 2X solution of Taq DNA Polymerase, dNTP,s and Reaction Buffer | Promega | 1 | (kit) Master Mix includes Taq DNA polymerase, dNTPs, MgCl2, and reaction buffer |
 | Sera-Mag™ Carboxylate-Modified Magnetic Beads & SpeedBeads | magnetic carboxylate modified particles | Cytvia | 1 | (10 mL) Cat_No:45152105050250 |
 | NovaSeq 6000 SP Reagent Kit v1.5 (500 cycles) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 500-cycle run on the NovaSeq 6000 System. | Illumina | 1 | (flow cell) Cat_No:20028402 |
 | PhiX Control v3 | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 150 base pairs. | Illumina | 1 | (tube) (10ul of 10nM template solution) |
@@ -207,17 +207,17 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 
 #### Preparation
 
-1. Sterilize workspaces and durable equipment, including pipettes within the BSC with 10% bleach. Then wipe down all surfaces and equipment with 70% EtOH.
-4. If you have a UV crosslinker available, UV pipettes and tube racks regularly for 2 minutes. 
-5. Run the UV light in the BSC for 30 minutes before starting work.
-6. Label all PCR plates both on the side of the plate and on the top of the foil (in the plate margins). Recommended labeling scheme includes plate name, primer, date of PCR and personnel initials.
+1. Sterilize workspaces and durable equipment, including pipettes within the BSC, with 10% bleach. Then wipe down all surfaces and equipment with 70% EtOH.
+2. If you have a UV crosslinker available, UV pipettes and tube racks regularly for 2 minutes. 
+3. Run the UV light in the BSC for 30 minutes before starting work.
+4. Label all PCR plates both on the side of the plate and on the top of the foil (in the plate margins). Recommended labeling scheme includes plate name, primer, date of PCR, and personnel initials.
 
-#### PCR Amplicon Cleanup
+#### PCR1 Cleanup
 
-1. Amplicons were then cleaned by incubating amplicons with Exo1/SAP following the manufacturers instructions:
-2. Remove ExoSAP-IT™ reagent from –20°C freezer and keep on ice throughout this procedure.
-3. Mix 5 μL of a post-PCR reaction product with 2 μL of ExoSAPIT™ reagent for a combined 7 μL reaction volume.
-When treating PCR product volumes greater than 5 μL, simply increase the amount of ExoSAP-IT™ reagent proportionally.
+PCR1 products were first cleaned by incubating amplicons with Exo1/SAP following the manufacturer's instructions:
+1. Remove ExoSAP-IT™ reagent from the –20°C freezer and keep on ice throughout this procedure.
+2. Mix 5 μL of a post-PCR reaction product with 2 μL of ExoSAPIT™ reagent for a combined 7 μL reaction volume.
+When treating PCR1 product volumes greater than 5 μL, simply increase the amount of ExoSAP-IT™ reagent proportionally.
 3. Incubate at 37°C for 30 minutes to degrade remaining primers and nucleotides.
 4. Incubate at 95°C for 5 minutes to inactivate ExoSAP-IT™ reagent.
 5. Product is stored at -20C. 
@@ -227,8 +227,8 @@ No quality control is conducted.
 
 #### Barcoding/Indexing PCR
 
-1. The indexing PCR included Promega Master mix, 0.5 µM of each Illumina Nextera UDI primer and 2 µl of template DNA (cleaned amplicon from the first PCR reaction) for a total volume of 25 µL
-2.  Thermocycling conditions consisted of an initial denaturation of 95 °C for 3 minutes followed by 8 cycles of  95 °C for 30 sec, 55 °C for 30 seconds and 72 °C for 30 seconds. 
+1. The indexing PCR (PCR2) included Promega Master mix, 0.5 µM of each Illumina Nextera UDI primer, and 2 µl of template DNA (cleaned amplicon from the first PCR reaction) for a total volume of 25 µL
+2.  Thermocycling conditions consisted of an initial denaturation of 95 °C for 3 minutes, followed by 8 cycles of  95 °C for 30 sec, 55 °C for 30 seconds, and 72 °C for 30 seconds. 
 
 **Primer Sequences Used**: Illumina Nextera UDI primer sequences
 
@@ -248,7 +248,7 @@ No quality control is conducted.
 | Template DNA|N/A| 2 | 100%|8% |
 | **Total**|**2392**| **25** | **N/A** |**N/A**|
 
-This table breaks down the mixture per plate and per reaction. When running full plates (96-wells), each reagent volume was multipled by 104 (96+8 extra sample volumes to account for pipetting error) when preparing the final master mix.
+This table breaks down the mixture per plate and per reaction. When running full plates (96-wells), each reagent volume was multiplied by 104 (96+8 extra sample volumes to account for pipetting error) when preparing the final master mix.
 
 **PCR Cycling Program**: 
 
@@ -263,16 +263,16 @@ This table breaks down the mixture per plate and per reaction. When running full
 
 **Step-by-Step Instructions:**
 
-*Note: When possible, PCR set-up should be carried out in a separate pre-PCR space that is distinct from where the post-PCR space where thermocyclers are located and all post-PCR processing is performed. No equipment, consumables, or reagents should be shared between pre- and post-PCR spaces with a unidirectional flow of sample processing. This step is post-PCR and thus should occur in the post-PCR spaces.*
+*Note: When possible, PCR set-up should be carried out in a separate pre-PCR space that is distinct from where the post-PCR space where thermocyclers are located, and all post-PCR processing is performed. No equipment, consumables, or reagents should be shared between pre- and post-PCR spaces with a unidirectional flow of sample processing. This step is post-PCR and thus should occur in the post-PCR spaces.*
 
 1. Set out Illumina Nextera UDI primers and samples to thaw.
-2. Vortex and spin down thawed samples, primers, and nuclease free water. Then tap/flick Promega Master Mix rather than vortexing before spinning down. Thawed reagents should be stored in a cooling block or fridge when not in use.
-3. Pool reagents to make final master mix, as denoted in above in reagent mixture table.
-4. Set out template DNA to thaw if frozen.
+2. Vortex and spin down thawed samples, primers, and nuclease-free water. Then tap/flick Promega Master Mix rather than vortexing before spinning down. Thawed reagents should be stored in a cooling block or fridge when not in use.
+3. Pool reagents to make the final master mix, as denoted above in the reagent mixture table.
+4. Set out the template DNA to thaw if frozen.
 5. Aliquot 23 μL of final master mix into each well of the PCR plate. The plate should sit in a cold block to ensure the reagents remain at a low temperature.
 6. Add 2 μL DNA template to each well
 8. Seal the PCR plate with foil.
-9. Spin down the plate, and then transport in cooler blocks before placing in thermocycler.
+9. Spin down the plate, and then transport in cooler blocks before placing in the thermocycler.
 10.  Run thermocycler protocol.
 
 ##### Quality control
@@ -291,7 +291,7 @@ No quality control is conducted.
 1. Sample library pools were sent for sequencing on an Illumina NovaSeq 6000 (San Diego, CA) at the Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core facility using the SP Reagent Kit v1.5 (500 cycles) (cat# 20028402).
 
 ##### Quality Control
-Necessary quality control measures were performed at the sequencing center prior to sequencing.
+Necessary quality control measures were performed at the sequencing center before sequencing.
 
 ### Basic troubleshooting guide
 
