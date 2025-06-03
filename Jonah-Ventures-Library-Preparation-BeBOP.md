@@ -38,8 +38,8 @@ platform: ILLUMINA
 instrument: Illumina NovaSeq 6000
 seq_kit: Illumina NovaSeq SP Reagent Kit v1.5 (500 cycles) (Cat_No:20028402)
 lib_layout: paired end
-lib_screen: PCR1 product was purified using an Exo1/SAP PCR Amplicon Clean Up before PCR2, then barcoded using Two-Step Barcoding PCR with Illumina Nextera Unique Dual Indices, 
-normalized with Cytiva SpeedBead magnetic carboxylate modified particles (Cat_No:45152105050250), pooled using 5 µL of product, quantified using a Qubit (ThermoFisher Scientific) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell
+lib_screen: 'PCR1 product was purified using an Exo1/SAP PCR Amplicon Clean Up before PCR2, then barcoded using Two-Step Barcoding PCR with Illumina Nextera Unique Dual Indices, 
+normalized with Cytiva SpeedBead magnetic carboxylate modified particles (Cat_No:45152105050250), pooled using 5 µL of product, quantified using a Qubit (ThermoFisher Scientific) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 800
