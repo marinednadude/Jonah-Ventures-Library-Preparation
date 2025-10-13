@@ -9,15 +9,15 @@ broad_scale_environmental_context: marine biome [ENVO:00000447], marine photic z
 local_environmental_context: oceanic epipelagic zone biome [ENVO:01000035], marine biome [ENVO:00000447], marine benthic biome [ENVO:01000024]
 environmental_medium: sea water [ENVO:00002149], polymerase chain reaction [OBI:0000415]
 target: amplicon sequencing assay [OBI_0002767]
-creator: Shannon Brown, Han Weinrich, Zachary Gold, Sean McAllister
+creator: Shannon Brown, Han Weinrich, Zachary Gold, Sean McAllister, Samantha Setta
 materials_required: vortexer [OBI:0400118], PCR instrument [OBI:0000989], Centrifuge [OBI:0400106]
 skills_required: sterile technique, pipetting skills, standard molecular technique
 time_required: 
 personnel_required: 1
 language: en
-issued: 2025-05-01
-audience: scientists
-publisher: NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Program; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies
+issued: '2025-05-01'
+audience: 'scientists'
+publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Group; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
 hasVersion: 1
 license: CC0 1.0 Universal
 maturity level: mature
