@@ -30,16 +30,15 @@ pcr2_dna_vol: 2
 pcr2_cond: initial denaturation:95_3; denaturation:95_0.5; annealing:55_0.5; elongation:72_0.5;8
 pcr2_annealingTemp: 55
 pcr2_cycles: 8
-pcr2_analysis_software: missing: not collected
-pcr2_plate_id: missing: not collected
-pcr2_method_additional: missing: not collected
+pcr2_analysis_software: 'missing: not collected'
+pcr2_plate_id: 'missing: not collected'
+pcr2_method_additional: 'missing: not collected'
 sequencing_location: Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core
 platform: ILLUMINA
 instrument: Illumina NovaSeq 6000
 seq_kit: Illumina NovaSeq SP Reagent Kit v1.5 (500 cycles) (Cat_No:20028402)
 lib_layout: paired end
-lib_screen: 'PCR1 product was purified using an Exo1/SAP PCR Amplicon Clean Up before PCR2, then barcoded using Two-Step Barcoding PCR with Illumina Nextera Unique Dual Indices, 
-cleaned and normalized with Life Technologies SequalPrep Normalization kit (cat#A10510-01), pooled using 5 µL of product quantified using a Qubit (ThermoFisher Scientific) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
+lib_screen: 'PCR1 product was purified using an Exo1/SAP PCR Amplicon Clean Up or Zymo ZR-96 DNA Clean-Up Kit before PCR2, then barcoded using Two-Step Barcoding PCR with Illumina Nextera Unique Dual Indices, cleaned and normalized with Cytiva SpeedBead magnetic carboxylate modified particles (#45152105050250) or Life Technologies SequalPrep Normalization kit (cat#A10510-01), pooled using 5 µL of product quantified using a Qubit (ThermoFisher Scientific) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 800
@@ -332,11 +331,33 @@ Necessary quality control measures were performed at the sequencing center befor
 
 | Sequencing Run | Barcode | PCR Amplicon Cleanup | PCR Normal Pool |
 | ----- | ----- | ----- | ----- |
-|20240328 JV236 Run1|	16Sv4	||	1X
-
-
-
-
+|20240208 JV236 Run1|16S Kelly|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|16Sv4v5|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|18Sv4|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|18Sv9|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|MiFish|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|COI|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|16S Kelly|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|16Sv4v5|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|18Sv4|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|18Sv9|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|dLoop|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|ITS|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|MiFish|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|COI|Option A - Exo1/SAP|Option B - SequalPrep Normalization kit|
+|20250107 JV3424 Run3|16S Kelly|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250107 JV3424 Run3|16Sv4v5|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250107 JV3424 Run3|18S Machida|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250107 JV3424 Run3|18Sv4|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250107 JV3424 Run3|18Sv9|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250107 JV3424 Run3|MiFish|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250107 JV3424 Run3|COI|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250118 JV4314 Run4|16Sv4v5|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250118 JV4314 Run4|18S Machida|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250118 JV4314 Run4|18Sv4|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250118 JV4314 Run4|ITS|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250118 JV4314 Run4|MiFish|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
+|20250118 JV4314 Run4|COI|Option A - Exo1/SAP|Option A - Cytiva SpeedBead magnetic carboxylate modified particles|
 
 
 ## REFERENCES
