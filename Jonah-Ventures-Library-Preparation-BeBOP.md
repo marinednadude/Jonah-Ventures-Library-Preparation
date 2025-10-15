@@ -9,9 +9,9 @@ broad_scale_environmental_context: marine biome [ENVO:00000447], marine photic z
 local_environmental_context: oceanic epipelagic zone biome [ENVO:01000035], marine biome [ENVO:00000447], marine benthic biome [ENVO:01000024]
 environmental_medium: sea water [ENVO:00002149], polymerase chain reaction [OBI:0000415]
 target: amplicon sequencing assay [OBI_0002767]
-creator: Shannon Brown, Han Weinrich, Zachary Gold, Sean McAllister, Samantha Setta
+creator: 'Shannon Brown, Han Weinrich, Samantha Setta, Zachary Gold, Sean McAllister'
 materials_required: vortexer [OBI:0400118], PCR instrument [OBI:0000989], Centrifuge [OBI:0400106]
-skills_required: sterile technique, pipetting skills, standard molecular technique
+skills_required: 'sterile technique, pipetting skills, standard molecular technique'
 time_required: 
 personnel_required: 1
 language: en
@@ -30,16 +30,16 @@ pcr2_dna_vol: 2
 pcr2_cond: initial denaturation:95_3; denaturation:95_0.5; annealing:55_0.5; elongation:72_0.5;8
 pcr2_annealingTemp: 55
 pcr2_cycles: 8
-pcr2_analysis_software: 'missing: not collected'
-pcr2_plate_id: 'missing: not collected'
-pcr2_method_additional: 'missing: not collected'
+pcr2_analysis_software: missing: not collected
+pcr2_plate_id: missing: not collected
+pcr2_method_additional: missing: not collected
 sequencing_location: Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core
 platform: ILLUMINA
 instrument: Illumina NovaSeq 6000
 seq_kit: Illumina NovaSeq SP Reagent Kit v1.5 (500 cycles) (Cat_No:20028402)
 lib_layout: paired end
 lib_screen: 'PCR1 product was purified using an Exo1/SAP PCR Amplicon Clean Up before PCR2, then barcoded using Two-Step Barcoding PCR with Illumina Nextera Unique Dual Indices, 
-normalized with Cytiva SpeedBead magnetic carboxylate modified particles (Cat_No:45152105050250), pooled using 5 µL of product, quantified using a Qubit (ThermoFisher Scientific) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
+cleaned and normalized with Life Technologies SequalPrep Normalization kit (cat#A10510-01), pooled using 5 µL of product quantified using a Qubit (ThermoFisher Scientific) and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 800
@@ -69,10 +69,12 @@ seq_method_additional: PhiX was spiked in at 35%
 
 | PREPARED BY | AFFILIATION | ORCID | DATE |
 | ------------- | ------------- | ------------- | ------------- |
-|Zachary Gold	|Ocean Molecular Ecology, NOAA PMEL	|<http://orcid.org/0000-0003-0490-7630>	|2025-05-01|
-| Shannon Brown | Ocean Molecular Ecology, NOAA PMEL & UW CICOES  | <https://orcid.org/0000-0001-9808-2638>|2025-05-01|
-| Han Weinrich  | Ocean Molecular Ecology, NOAA PMEL & UW CICOES  | <http://orcid.org/0009-0007-6063-0986>|2025-05-01|
-|Sean McAllister	|Ocean Molecular Ecology, NOAA PMEL & UW CICOES	|<http://orcid.org/0000-0001-6654-3495>|2025-05-01|
+| Zachary Gold	|Ocean Molecular Ecology, NOAA PMEL	|<http://orcid.org/0000-0003-0490-7630>	|2025-05-01|
+| Shannon Brown | Ocean Molecular Ecology, NOAA PMEL & UW CICOES  |<https://orcid.org/0000-0001-9808-2638>|2025-05-01|
+| Han Weinrich | Ocean Molecular Ecology, NOAA PMEL & UW CICOES  |<http://orcid.org/0009-0007-6063-0986>|2025-05-01|
+| Sean McAllister | Ocean Molecular Ecology, NOAA PMEL & UW CICOES	|<http://orcid.org/0000-0001-6654-3495>|2025-05-01|
+| Samantha Setta | Ocean Molecular Ecology, NOAA PMEL & UW CICOES |<https://orcid.org/0000-0001-9075-7573>|2025-10-01|
+
 
 ## RELATED PROTOCOLS
 
@@ -139,12 +141,14 @@ These external protocols use the same general Illumina Nextera Unique Dual Index
 
 ### Summary
 
-This protocol is used by [Jonah Ventures](https://jonahventures.com/) to prepare next-generation amplicon/metabarcoding sequencing libraries from  NOAA PMEL OME PCR1 products. PCR plates are first cleaned using Exo1/SAP, then barcoded using unique, sample-specific Illumina Nextera Unique Dual Indices (2x 10bp), pooled using mag-bind normalization, and sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles) (cat# 20028402). Importantly, this standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,071 total libraries with far greater than 100K sequence read depth.
+This protocol is used by [Jonah Ventures](https://jonahventures.com/) to prepare next-generation amplicon/metabarcoding sequencing libraries from  NOAA PMEL OME PCR1 products. PCR plates are first cleaned using either the Zymo ZR-96 DNA Clean-Up Kit or Exo1/SAP, then barcoded using unique, sample-specific Illumina Nextera Unique Dual Indices (2x 10bp) or 12-nucleotide index sequence, pooled using mag-bind normalization or the SequalPrep Normalization kit (cat#A10510-01), and sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles) (cat# 20028402). Importantly, this standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,071 total libraries with far greater than 100K sequence read depth.
+
+This protocol has been used over multiple years and has evolved over time. There are two variations of the PCR amplicon cleanup, and the PCR normal pool is indicated as option A or B in the protocols and Table of Protocol variations for each OME barcode and sequencing run included below.
 
 ### Method description and rationale
 
 Advantages to this protocol include ease of use, leveraging commercially available Illumina sequencing kits and indices, as well as the ability to sequence across the tree of life with a multi-marker approach with up to 384 samples x 8 markers simultaneously. This protocol's steps include: _PCR Amplicon Cleanup_, _Barcoding/Indexing PCR_, _PCR Normalization and Pooling_, and _Sequencing_. 
-NOAA PMEL OME conducts eDNA sample collection, filtration, extraction, and PCR1 amplification before this protocol (See our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Plates of PCR1 product are shipped on dry ice to Jonah Ventures in Boulder, CO, USA, where they are processed using this protocol by the sequencing company. PCR1 product is first cleaned to remove excess primers and dNTPs using an Exo1/SAP cleanup protocol. Cleaned PCR1 product is then indexed through a second barcoding PCR step using Illumina Nextera UDI indices. Indexed PCR2 product is then normalized using mag-bind normalization and then pooled by even volume (and concentration) into a final pooled library. The library is then sequenced on an Illumina NovaSeq 6000 at the Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core using the SP Reagent Kit v1.5 (500 cycles). The sequencing core demultiplexes raw sequence data. And downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
+NOAA PMEL OME conducts eDNA sample collection, filtration, extraction, and PCR1 amplification before this protocol (See our NOAA PMEL OME [Methods](https://zenodo.org/communities/noaa_ome)). Plates of PCR1 product are shipped on dry ice to Jonah Ventures in Boulder, CO, USA, where they are processed using this protocol by the sequencing company. PCR1 product is first cleaned to remove excess primers and dNTPs using either option A) an Exo1/SAP cleanup protocol or option B) Zymo ZR-96 DNA Clean-Up Kit (4 x 96 Preps.) (cat#D4018) (Zymo, Irvine, CA). Cleaned PCR1 product is then indexed through a second barcoding PCR step using Illumina Nextera UDI indices. Indexed PCR2 product is then normalized using option A) mag-bind normalization or option B) SequalPrep Normalization Plates (Life Technologies, Carlsbad, CA) and then pooled by even volume (and concentration) into a final pooled library. The library is then sequenced on an Illumina NovaSeq 6000 at the Texas A&M Agrilife Genomics and Bioinformatics Sequencing Core using the SP Reagent Kit v1.5 (500 cycles). The sequencing core demultiplexes raw sequence data. And downstream bioinformatics is conducted via [REVAMP](https://github.com/McAllister-NOAA/REVAMP).
 
 This protocol is less detailed than our typical protocols, as we do not conduct this protocol ourselves. However, we capture the necessary [FAIRe](https://fair-edna.github.io/) relevant information.
 
@@ -196,10 +200,12 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | **Chemicals** |
 | 80% Ethanol | Molecular biology grade ethanol |
 | Exo1/SAP | ExoSAP-IT PCR Product Cleanup Reagent | ThermoFisher Scientific | 1 | (mL vial) is 500 reactions |
+| ZR-96 DNA Clean-Up Kit | Zymo ZR-96 DNA Clean-Up Kit | Zymo Research | 4 | 96 preps Cat_No:D4018 |
 | Nuclease-free water | Nuclease-Free Water (not DEPC-Treated) | ThermoFisher Scientific | 1 | (mL vial) |
 | Illumina Unique Dual Indexes Sets A, B, C, D | Illumina Unique Dual Indexes| Illumina | 1 | Illumina® DNA/RNA UD Indexes Set A, Tagmentation (96 Indexes, 96 Samples) 20091654; Illumina DNA/RNA UD Indexes Set B, Tagmentation (96 Indexes, 96 Samples) 20091656; Illumina® DNA/RNA UD Indexes Set C, Tagmentation (96 Indexes, 96 Samples) 20091658; Illumina® DNA/RNA UD Indexes Set D, Tagmentation (96 Indexes, 96 Samples) 20091660 |
 | Promega Master mix | Premixed 2X solution of Taq DNA Polymerase, dNTP,s and Reaction Buffer | Promega | 1 | (kit) Master Mix includes Taq DNA polymerase, dNTPs, MgCl2, and reaction buffer |
 | Sera-Mag™ Carboxylate-Modified Magnetic Beads & SpeedBeads | magnetic carboxylate modified particles | Cytvia | 1 | (10 mL) Cat_No:45152105050250 |
+| SequalPrep Normalization kit | SequalPrep Normalization kit | Applied Biosystems | 10 | 96 samples Cat_No:A10510-01 |
 | NovaSeq 6000 SP Reagent Kit v1.5 (500 cycles) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 500-cycle run on the NovaSeq 6000 System. | Illumina | 1 | (flow cell) Cat_No:20028402 |
 | PhiX Control v3 | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 150 base pairs. | Illumina | 1 | (tube) (10ul of 10nM template solution) |
 | 1 N NaOH, molecular biology grade | NaOH needed for denaturing DNA | General lab supplier | 1 | (mL) |
@@ -216,7 +222,9 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 3. Run the UV light in the BSC for 30 minutes before starting work.
 4. Label all PCR plates both on the side of the plate and on the top of the foil (in the plate margins). Recommended labeling scheme includes plate name, primer, date of PCR, and personnel initials.
 
-#### PCR1 Cleanup
+#### PCR1 Cleanup 
+
+##### Option A)
 
 PCR1 products were first cleaned by incubating amplicons with Exo1/SAP following the manufacturer's instructions:
 1. Remove ExoSAP-IT™ reagent from the –20°C freezer and keep on ice throughout this procedure.
@@ -224,7 +232,18 @@ PCR1 products were first cleaned by incubating amplicons with Exo1/SAP following
 When treating PCR1 product volumes greater than 5 μL, simply increase the amount of ExoSAP-IT™ reagent proportionally.
 3. Incubate at 37°C for 30 minutes to degrade remaining primers and nucleotides.
 4. Incubate at 95°C for 5 minutes to inactivate ExoSAP-IT™ reagent.
-5. Product is stored at -20C. 
+5. Product is stored at -20C.
+
+##### Option B)
+
+PCR1 products were first cleaned by incubating amplicons with Zymo ZR-96 DNA Clean-Up Kit following the manufacturer's instructions:
+1. Add 96 ml 100% ethanol (104 ml 95% ethanol) to the 24 ml DNA Wash Buffer concentrate. Add 192 ml 100% ethanol (208 ml 95% ethanol) to the 48 ml DNA Wash Buffer concentrate.
+2. In a 1.5 ml microcentrifuge tube, add 25 μL volumes of DNA Binding Buffer to each 5 μL volume of PCR product. Mix briefly by vortexing.
+3. Transfer sample mixtures to the wells of a Silicon-A™ Plate mounted onto a Collection Plate.
+4. Centrifuge at ≥ 3,000 x g (5,000 x g max.) for 5 minutes until sample mixtures have been completely filtered. Discard the flow-through.
+5. Add 300 µl DNA Wash Buffer to each well of the Silicon-A™ Plate. Centrifuge at ≥ 3,000 x g for 5 minutes. Repeat wash step.
+6. Add 30-40 µl water directly to the column matrix in each well. Transfer the Silicon-A™ Plate onto an Elution Plate and centrifuge at ≥ 3,000 x g for 3 minutes to elute the DNA.
+7. Product is stored at -20C.
 
 ##### Quality control
 No quality control is conducted.
@@ -258,7 +277,7 @@ This table breaks down the mixture per plate and per reaction. When running full
 
 | PCR step | Temperature | Duration | Repetition |
 | ----- | ----- | ----- | ----- |
-|Initial denaturation|	95°C	|3min|	1X
+|Initial denaturation|	95°C	|3min|	1X|
 |**Normal Cycling**||||
 |Denaturation|	95°C|	30s|	8X|
 |Annealing|	55°C|	30s	|8X|
@@ -286,7 +305,15 @@ No quality control is conducted.
 
 ##### PCR Normalization
 
+Option A)
+
 1. A 15µl aliquot of PCR amplicon was purified and normalized using Cytiva SpeedBead magnetic carboxylate modified particles (#45152105050250).
+
+2. Samples were then pooled together by adding 5µl of each normalized sample to the pool.
+
+Option B) 
+
+1. A 15µl aliquot of PCR amplicon was purified and normalized using SequalPrep Normalization kit (cat#A10510-01).
 
 2. Samples were then pooled together by adding 5µl of each normalized sample to the pool.
 
@@ -300,6 +327,16 @@ Necessary quality control measures were performed at the sequencing center befor
 ### Basic troubleshooting guide
 
 - Use a unique index for each sample. Multiple different markers (e.g. MiFish Teleost 12S, 16S Universal Parada, Leray CO1) from different PCRs can be pooled together for sequencing. Similar markers (e.g. MiFish Elasmobranch 12S and Teleost 12S) will be difficult to disentangle bioinformatically.
+
+### Table of Protocol variations for each OME barcode and sequencing run.
+
+| Sequencing Run | Barcode | PCR Amplicon Cleanup | PCR Normal Pool |
+| ----- | ----- | ----- | ----- |
+|20240328 JV236 Run1|	16Sv4	||	1X
+
+
+
+
 
 
 ## REFERENCES
