@@ -1,8 +1,6 @@
 # Jonah-Ventures-Library-Preparation
 PMEL Jonah Ventures Library Preparation
 
-# NOAA-PMEL-OME-Stoeck-NCOG-phytoplankton-18S-V4-PCR-Protocol-BeBOP
-
 [![DOI]()]()
 
 See [Jonah-Ventures-Library-Preparation-BeBOP.md](https://github.com/marinednadude/Jonah-Ventures-Library-Preparation/blob/main/Jonah-Ventures-Library-Preparation-BeBOP.md) for detailed protocol.  
