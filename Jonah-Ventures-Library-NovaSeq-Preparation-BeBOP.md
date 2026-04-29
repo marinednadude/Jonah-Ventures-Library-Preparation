@@ -25,7 +25,7 @@ maturity level: mature
 # FAIRe terms
 barcoding_pcr_appr: two-step pcr
 pcr2_amplificationReactionVolume: 25
-pcr2_commercial_mm: Promega Master mix
+pcr2_commercial_mm: Promega Master Mix
 pcr2_dna_vol: 2
 pcr2_cond: initial denaturation:95_3; denaturation:95_0.5; annealing:55_0.5; elongation:72_0.5;8
 pcr2_annealingTemp: 55
@@ -165,10 +165,10 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | DESCRIPTION | PRODUCT NAME AND MODEL | MANUFACTURER | QUANTITY | REMARK |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **Durable equipment** |
-| Thermal cycler | Mastercycler nexus thermal cycler | Eppendorf | 1 | Can be substituted with generic |
-| Vortex | Vortex genie | Scientific Industries | 1 | Can be substituted with generic |
+| Thermal Cycler | Mastercycler Nexus Thermal Cycler | Eppendorf | 1 | Can be substituted with generic |
+| Vortex | Vortex Genie | Scientific Industries | 1 | Can be substituted with generic |
 | PCR plate centrifuge | Microplate centrifuge | Generic | 1 | |
-| Mag stand | 96-Well magnetic separator | Generic | 1 | |
+| Magnetic separator stand | 96-Well magnetic separator | Generic | 1 | |
 | Pipettor: 0.5-10 μl | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 100-1000 μl | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 10-100 μl |  Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
@@ -192,7 +192,7 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | ZR-96 DNA Clean-Up Kit | Zymo ZR-96 DNA clean-up kit | Zymo Research | 4 | 96 preps |
 | Nuclease-free water | Nuclease-free water (not DEPC-Treated) | ThermoFisher Scientific | 1 | (mL vial) |
 | Illumina Unique Dual Indexes Sets A, B, C, D | Illumina Unique Dual Indexes| Illumina | 1 | Illumina® DNA/RNA UD Indexes Set A, Tagmentation (96 Indexes, 96 Samples) 20091654; Illumina DNA/RNA UD Indexes Set B, Tagmentation (96 Indexes, 96 Samples) 20091656; Illumina® DNA/RNA UD Indexes Set C, Tagmentation (96 Indexes, 96 Samples) 20091658; Illumina® DNA/RNA UD Indexes Set D, Tagmentation (96 Indexes, 96 Samples) 20091660 |
-| Promega Master mix | Premixed 2X solution of Taq DNA Polymerase, dNTP,s and Reaction Buffer | Promega | 1 | (kit) Master Mix includes Taq DNA polymerase, dNTPs, MgCl2, and reaction buffer |
+| Promega Master Mix | Premixed 2X solution of Taq DNA Polymerase, dNTP,s and Reaction Buffer | Promega | 1 | (kit) Master Mix includes Taq DNA polymerase, dNTPs, MgCl2, and reaction buffer |
 | Sera-Mag™ Carboxylate-Modified Magnetic Beads & SpeedBeads | Magnetic carboxylate modified particles | Cytvia | 1 | (10 mL) |
 | SequalPrep Normalization kit | SequalPrep Normalization kit | Applied Biosystems | 10 | 96 samples Cat_No:A10510-01 |
 | NovaSeq 6000 SP Reagent Kit v1.5 (500 cycles) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 500-cycle run on the NovaSeq 6000 System. | Illumina | 1 | (flow cell) Cat_No:20028402 |
@@ -224,8 +224,8 @@ When treating PCR1 product volumes greater than 5 μL, simply increase the amoun
 
 **Option B**: PCR1 products were first cleaned by incubating amplicons with Zymo ZR-96 DNA Clean-Up Kit following the manufacturer's instructions:
 
-1. Add 96 ml 100% EtOH (104 ml 95% EtOH) to the 24 ml DNA Wash Buffer concentrate. Add 192 ml 100% ethanol (208 ml 95% ethanol) to the 48 ml DNA Wash Buffer concentrate.
-2. In a 1.5 ml microcentrifuge tube, add 25 μL volumes of DNA Binding Buffer to each 5 μL volume of PCR product. Mix briefly by vortexing.
+1. Add 96 μL 100% EtOH (104 μL 95% EtOH) to the 24 μL DNA Wash Buffer concentrate. Add 192 μL 100% ethanol (208 μL 95% ethanol) to the 48 μL DNA Wash Buffer concentrate.
+2. In a 1.5 mL microcentrifuge tube, add 25 μL volumes of DNA Binding Buffer to each 5 μL volume of PCR product. Mix briefly by vortexing.
 3. Transfer sample mixtures to the wells of a Silicon-A™ Plate mounted onto a Collection Plate.
 4. Centrifuge at ≥ 3,000 x g (5,000 x g max.) for 5 minutes until sample mixtures have been completely filtered. Discard the flow-through.
 5. Add 300 µl DNA Wash Buffer to each well of the Silicon-A™ Plate. Centrifuge at ≥ 3,000 x g for 5 minutes. Repeat the wash step.
@@ -245,7 +245,7 @@ When treating PCR1 product volumes greater than 5 μL, simply increase the amoun
 
 | Reagent |Volume (μL) per plate| Volume (μL) per reaction | Initial concentration| Final concentration|
 | ----- | ----- | ----- |----- |----- |
-| Promega Master mix |1300| 12.5 |100% |50% |
+| Promega Master Mix |1300| 12.5 |100% |50% |
 | Forward Primer |104| 1 |10 μM |0.5 μM |
 | Reverse Primer |104| 1 |10 μM | 0.5 μM |
 | Nuclease-Free Water |884|8.5 | N/A|N/A |
