@@ -38,7 +38,7 @@ platform: Illumina
 instrument: Illumina NovaSeq 6000
 seq_kit: Illumina NovaSeq SP Reagent Kit v1.5 (500 cycles) (Cat_No:20028402)
 lib_layout: paired end
-lib_screen: 'PCR1 product was purified using an ExoSAP-IT PCR Amplicon Clean Up or Zymo ZR-96 DNA Clean-Up Kit before PCR2, then barcoded using two-step barcoding PCR with Illumina Nextera Unique Dual Indices, cleaned and normalized with Cytiva SpeedBead or Life Technologies SequalPrep Normalization kit, pooled using 5 µL of product quantified using a Qubit and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
+lib_screen: 'PCR1 product was purified using an ExoSAP-IT PCR Amplicon Clean Up or Zymo ZR-96 DNA Clean-Up Kit before PCR2, then barcoded using two-step barcoding PCR with Illumina Nextera Unique Dual Indices, cleaned and normalized with Cytiva SpeedBead or Life Technologies SequalPrep Normalization kit, pooled using 5 µL of product and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 800
@@ -198,9 +198,6 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Cytiva SpeedBead | Sera-Mag Carboxylate-Modified Magnetic Beads & SpeedBeads | Cytvia | 1 | (10 mL) |
 | SequalPrep Normalization Kit | SequalPrep Normalization Plate Kit, 96-wells | Applied Biosystems | 10 | Cat No: A1051001 |
 | NovaSeq 6000 SP Reagent Kit v1.5 (500 cycles) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 500-cycle run on the NovaSeq 6000 System. | Illumina | 1 | (flow cell) Cat_No:20028402 |
-| PhiX Control v3 | Kitted DNA control for the Illumina sequencing platform. Compatible with Single and Paired End reads up to 150 base pairs. | Illumina | 1 tube | |
-| 1 N NaOH, molecular biology grade | NaOH needed for denaturing DNA | General lab supplier | 10 μL per plate|  |
-| 10 mM Tris-HCl, pH 8.5 with 0.1% Tween 20 | Buffered Tween needed for denaturing DNA | General lab supplier | 1 mL | |
 
 ## STANDARD OPERATING PROCEDURE
 
