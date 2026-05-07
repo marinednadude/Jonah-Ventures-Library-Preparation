@@ -18,7 +18,7 @@ language: en
 issued: '2026-5-07'
 audience: 'scientists'
 publisher: 'NOAA Pacific Marine Environmental Laboratory Ocean Molecular Ecology Group; University of Washington Cooperative Institute for Climate, Ocean, & Ecosystem Studies'
-hasVersion: 1.1.0
+hasVersion: 1.0.0
 license: CC0 1.0 Universal
 maturity level: mature
 
@@ -97,8 +97,7 @@ demux_max_mismatch: '0 | 0.3'
 
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
-| 1.0.0 | 2025-01-28 | Initial release |
-| 1.1.0 | 2025-05-07 | Revised acronyms and glossary, clarified safety guidelines, and updated content |
+| 1.0.0 | 2026-05-07 | Initial release |
 
 ### Acronyms and Abbreviations
 
