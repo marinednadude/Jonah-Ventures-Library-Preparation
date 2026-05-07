@@ -38,7 +38,7 @@ platform: Illumina
 instrument: Illumina NovaSeq 6000
 seq_kit: Illumina NovaSeq SP Reagent Kit v1.5 (500 cycles) (Cat_No:20028402)
 lib_layout: paired end
-lib_screen: 'PCR1 product was purified using an 1/SAP PCR Amplicon Clean Up or Zymo ZR-96 DNA Clean-Up Kit before PCR2, then barcoded using two-step barcoding PCR with Illumina Nextera Unique Dual Indices, cleaned and normalized with Cytiva SpeedBead or Life Technologies SequalPrep Normalization kit, pooled using 5 µL of product quantified using a Qubit and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
+lib_screen: 'PCR1 product was purified using an ExoSAP-IT PCR Amplicon Clean Up or Zymo ZR-96 DNA Clean-Up Kit before PCR2, then barcoded using two-step barcoding PCR with Illumina Nextera Unique Dual Indices, cleaned and normalized with Cytiva SpeedBead or Life Technologies SequalPrep Normalization kit, pooled using 5 µL of product quantified using a Qubit and diluted to 800 pM before loading it onto a NovaSeq Flow Cell'
 adapter_forward: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
 adapter_reverse: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
 lib_conc: 800
@@ -98,7 +98,7 @@ demux_max_mismatch: '0 | 0.3'
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
 | 1.0.0 | 2025-01-28 | Initial release |
-| 1.1.0 | 2025-05-07 | Added acronyms, revised content, clarified safety guidelines, added freshwater references |
+| 1.1.0 | 2025-05-07 | Revised acronyms and glossary, clarified safety guidelines, and updated content |
 
 ### Acronyms and Abbreviations
 
@@ -121,14 +121,14 @@ demux_max_mismatch: '0 | 0.3'
 
 | SPECIALISED TERM | DEFINITION |
 | ------------- | ------------- |
-| Primer dimer | An undesired PCR byproduct consisting of primer molecules that have hybridized to each other; removed during the AMPure XP cleanup steps.|
-| Library |A collection of DNA fragments that have been prepared (cleaned, indexed, and adapter-ligated) for sequencing.|
+| Library | A collection of DNA fragments that have been prepared (cleaned, indexed, and adapter-ligated) for sequencing.|
+| Pooling | The process of combining multiple indexed libraries into a single tube at equal molar ratios. |
 
 ## BACKGROUND
 
 ### Summary
 
-This protocol is used by [Jonah Ventures](https://jonahventures.com/) to prepare next-generation amplicon/metabarcoding sequencing libraries from  NOAA PMEL OME PCR1 products. PCR plates are first cleaned using either the Zymo ZR-96 DNA Clean-Up Kit or 1/SAP, then barcoded using unique, sample-specific Illumina Nextera Unique Dual Indices or 12-nucleotide index sequence, pooled using mag-bind normalization or the SequalPrep Normalization kit, and sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles). Importantly, this standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,071 total libraries with far greater than 100K sequence read depth.
+This protocol is used by [Jonah Ventures](https://jonahventures.com/) to prepare next-generation amplicon/metabarcoding sequencing libraries from  NOAA PMEL OME PCR1 products. PCR plates are first cleaned using either the Zymo ZR-96 DNA Clean-Up Kit or ExoSAP-IT, then barcoded using unique, sample-specific Illumina Nextera Unique Dual Indices or 12-nucleotide index sequence, pooled using mag-bind normalization or the SequalPrep Normalization kit, and sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles). Importantly, this standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,071 total libraries with far greater than 100K sequence read depth.
 
 This protocol has been used over multiple years and has evolved over time. There are two variations of the PCR amplicon cleanup, and the PCR normal pool is indicated as option A or B in the protocols and table of protocol variations for each OME barcode and sequencing run included below.
 
@@ -168,13 +168,14 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Thermal Cycler | Mastercycler Nexus Thermal Cycler | Eppendorf | 1 | Can be substituted with generic |
 | Vortex | Vortex Genie | Scientific Industries | 1 | Can be substituted with generic |
 | PCR plate centrifuge | Microplate centrifuge | Generic | 1 | |
-| Magnetic seperator stand | 96-Well magnetic separator | Generic | 1 | |
+| Magnetic seperator | 96-Well magnetic separator | Generic | 1 | |
 | Pipettor: 0.5-10 μL | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 100-1000 μL | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 10-100 μL |  Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Multi-channel pipettor: 10-100 μL | Research plus 8-channel pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Multi-channel pipettor: 0.5-10 μL | Research plus 8-channel pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Serological pipette | Easypet 3 pipette | Eppendorf | 1 | Can be substituted with any accurate pipette.|
+| PCR cooler rack | PCR cooler 0.2-0.5 mL | Eppendorf | 1 | Can be substituted with generic|
 | Ice bucket | Generic | Generic | 1 | |
 | **Consumable equipment** |
 | 96-well PCR plate | Armadillo PCR plate, 96-well, clear wells | ThermoFisher | 2 | Can be substituted with generic. |
@@ -187,7 +188,8 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Gloves | Nitrile gloves | Generic | 1 box | |
 | Kimwipes | Delicate task wipes | KimTech | 1 box | Can be substituted with generic; must be lint-free. |
 | **Chemicals** |
-| 100% EtOH | Molecular biology grade ethanol |
+| 100% and 70% EtOH | Molecular biology grade ethanol |
+| 10% bleach| Hypochlorite bleach |Clorox|  |  |
 | ExoSAP-IT | ExoSAP-IT PCR product cleanup reagent | ThermoFisher Scientific | 1 vial | 1 vial is 500 reactions |
 | ZR-96 DNA Clean-Up Kit | ZR-96 DNA Clean-Up Kit | Zymo Research | 4 | 96 preps; includes the Silicon-A Plates, Collection Plates, Elution Plates, and all required buffers |
 | Nuclease-free water | Nuclease-free water (not DEPC-Treated) | ThermoFisher Scientific | 1 | (mL vial) |
@@ -276,14 +278,14 @@ This table breaks down the mixture per plate and per reaction. When running full
 5. Aliquot 23 μL of final master mix into each well of the PCR plate. The plate should sit in a cold block to ensure the reagents remain at a low temperature.
 6. Add 2 μL DNA template to each well.
 8. Seal the PCR plate with foil.
-9. Spin down the plate, and then transport in cooler blocks before placing in the thermocycler.
+9. Spin down the plate, and then transport in a PCR cooler rack before placing it in the thermocycler.
 10. Run thermocycler protocol.
 
 #### PCR Normalization and Pooling
 
 **Option A**
 
-1. A 15 μL aliquot of PCR amplicon was purified and normalized using [Cytiva SpeedBead](https://cdn.cytivalifesciences.com/api/public/content/digi-33629-pdf?_gl=1*1wfvssv*_gcl_au*MjQxODMyMzYyLjE3NzM5NDQzNTc.*_ga*MTQ4MDU2MjIwMi4xNzczOTQ0MzU2*_ga_CS9H0CZBWW*czE3NzgxNzkzNjckbzIkZzAkdDE3NzgxNzkzNjckajYwJGwwJGgw*_ga_HDHKGPXE6G*czE3NzgxNzkzNzEkbzQkZzAkdDE3NzgxNzkzNzEkajYwJGwwJGgzNjM4NjE0Njc.).
+1. A 15 μL aliquot of PCR amplicon was purified and normalized using [Cytiva SpeedBead](https://cdn.cytivalifesciences.com/api/public/content/digi-33629-pdf?_gl=1*1wfvssv*_gcl_au*MjQxODMyMzYyLjE3NzM5NDQzNTc.*_ga*MTQ4MDU2MjIwMi4xNzczOTQ0MzU2*_ga_CS9H0CZBWW*czE3NzgxNzkzNjckbzIkZzAkdDE3NzgxNzkzNjckajYwJGwwJGgw*_ga_HDHKGPXE6G*czE3NzgxNzkzNzEkbzQkZzAkdDE3NzgxNzkzNzEkajYwJGwwJGgzNjM4NjE0Njc.) and a magnetic seperator.
 2. Samples were then pooled together by adding 5 μL of each normalized sample to the pool.
 
 **Option B**
@@ -303,32 +305,32 @@ Sample library pools were sent for sequencing on an Illumina NovaSeq 6000 (San D
 
 | Sequencing Run | Barcode | PCR Amplicon Cleanup | PCR Normal Pool |
 | ----- | ----- | ----- | ----- |
-|20240208 JV236 Run1|16S Kelly|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240208 JV236 Run1|16Sv4v5|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240208 JV236 Run1|18Sv4|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240208 JV236 Run1|18Sv9|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240208 JV236 Run1|MiFish|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240208 JV236 Run1|COI|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240328 JV3041 Run2|16S Kelly|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|16S Kelly|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|16Sv4v5|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|18Sv4|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|18Sv9|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|MiFish|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240208 JV236 Run1|COI|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|16S Kelly|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
 |20240328 JV3041 Run2|16Sv4v5|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option B - SequalPrep Normalization kit|
-|20240328 JV3041 Run2|18Sv4|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240328 JV3041 Run2|18Sv9|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240328 JV3041 Run2|dLoop|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240328 JV3041 Run2|ITS|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240328 JV3041 Run2|MiFish|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
-|20240328 JV3041 Run2|COI|Option A - 1/SAP|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|18Sv4|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|18Sv9|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|dLoop|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|ITS|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|MiFish|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
+|20240328 JV3041 Run2|COI|Option A - ExoSAP-IT|Option B - SequalPrep Normalization kit|
 |20250107 JV3424 Run3|16S Kelly|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option A - Cytiva SpeedBead|
 |20250107 JV3424 Run3|16Sv4v5|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option A - Cytiva SpeedBead|
-|20250107 JV3424 Run3|18S Machida|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250107 JV3424 Run3|18Sv4|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250107 JV3424 Run3|18Sv9|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250107 JV3424 Run3|MiFish|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250107 JV3424 Run3|COI|Option A - 1/SAP|Option A - Cytiva SpeedBead|
+|20250107 JV3424 Run3|18S Machida|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250107 JV3424 Run3|18Sv4|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250107 JV3424 Run3|18Sv9|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250107 JV3424 Run3|MiFish|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250107 JV3424 Run3|COI|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
 |20250118 JV4314 Run4|16Sv4v5|Option B - Zymo ZR-96 DNA Clean-Up Kit|Option A - Cytiva SpeedBead|
-|20250118 JV4314 Run4|18S Machida|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250118 JV4314 Run4|18Sv4|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250118 JV4314 Run4|ITS|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250118 JV4314 Run4|MiFish|Option A - 1/SAP|Option A - Cytiva SpeedBead|
-|20250118 JV4314 Run4|COI|Option A - 1/SAP|Option A - Cytiva SpeedBead|
+|20250118 JV4314 Run4|18S Machida|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250118 JV4314 Run4|18Sv4|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250118 JV4314 Run4|ITS|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250118 JV4314 Run4|MiFish|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
+|20250118 JV4314 Run4|COI|Option A - ExoSAP-IT|Option A - Cytiva SpeedBead|
 
 ## REFERENCES
