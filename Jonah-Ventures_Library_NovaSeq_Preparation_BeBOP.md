@@ -127,7 +127,7 @@ demux_max_mismatch: '0 | 0.3'
 
 ### Summary
 
-This protocol is used by [Jonah Ventures](https://jonahventures.com/) to prepare next-generation amplicon/metabarcoding sequencing libraries from  NOAA PMEL OME PCR1 products. PCR plates are first cleaned using either the Zymo ZR-96 DNA Clean-Up Kit or ExoSAP-IT, then barcoded using unique, sample-specific Illumina Nextera Unique Dual Indices or 12-nucleotide index sequence, pooled using mag-bind normalization or the SequalPrep Normalization kit, and sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles). Importantly, this standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,071 total libraries with far greater than 100K sequence read depth.
+This protocol is used by [Jonah Ventures](https://jonahventures.com/) to prepare next-generation amplicon/metabarcoding sequencing libraries from  NOAA PMEL OME PCR1 products. PCR plates are first cleaned using either the Zymo ZR-96 DNA Clean-Up Kit or ExoSAP-IT, then barcoded using unique, sample-specific Illumina Nextera Unique Dual Indices or 12-nucleotide index sequence, pooled using mag-bind normalization or the SequalPrep Normalization kit, and sequenced on a NovaSeq 6000 using the SP Reagent Kit v1.5 (500 cycles). Importantly, this standard two-step PCR sequencing library preparation methodology allows for the reuse of indices across multiple markers per sample, enabling 4 plates x 96 samples x 5-8 markers = 1,920-3,072 total libraries with far greater than 100K sequence read depth.
 
 This protocol has been used over multiple years and has evolved over time. There are two variations of the PCR amplicon cleanup, and the PCR normal pool is indicated as option A or B in the protocols and table of protocol variations for each OME barcode and sequencing run included below.
 
@@ -167,7 +167,7 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Thermal Cycler | Mastercycler Nexus Thermal Cycler | Eppendorf | 1 | Can be substituted with generic |
 | Vortex | Vortex Genie | Scientific Industries | 1 | Can be substituted with generic |
 | PCR plate centrifuge | Microplate centrifuge | Generic | 1 | |
-| Magnetic seperator | 96-Well magnetic separator | Generic | 1 | |
+| Magnetic separator | 96-Well magnetic separator | Generic | 1 | |
 | Pipettor: 0.5-10 μL | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 100-1000 μL | Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
 | Pipettor: 10-100 μL |  Research plus adjustable-volume pipette | Eppendorf | 1 | Can be substituted with any accurate pipette. |
@@ -194,7 +194,7 @@ This protocol takes about 4-5 hours to execute per plate. There is a safe-stoppi
 | Nuclease-free water | Nuclease-free water (not DEPC-Treated) | ThermoFisher Scientific | 1 | (mL vial) |
 | Illumina Unique Dual Indexes Sets A, B, C, D | Illumina Unique Dual Indexes| Illumina | 1 | Illumina® DNA/RNA UD Indexes Set A, Tagmentation (96 Indexes, 96 Samples) 20091654; Illumina DNA/RNA UD Indexes Set B, Tagmentation (96 Indexes, 96 Samples) 20091656; Illumina® DNA/RNA UD Indexes Set C, Tagmentation (96 Indexes, 96 Samples) 20091658; Illumina® DNA/RNA UD Indexes Set D, Tagmentation (96 Indexes, 96 Samples) 20091660 |
 | Promega Master Mix | Premixed 2X solution of Taq DNA Polymerase, dNTP,s and Reaction Buffer | Promega | 1 | (kit) Master Mix includes Taq DNA polymerase, dNTPs, MgCl2, and reaction buffer |
-| Cytiva SpeedBead | Sera-Mag Carboxylate-Modified Magnetic Beads & SpeedBeads | Cytvia | 1 | (10 mL) |
+| Cytiva SpeedBead | Sera-Mag Carboxylate-Modified Magnetic Beads & SpeedBeads | Cytiva | 1 | (10 mL) |
 | SequalPrep Normalization Kit | SequalPrep Normalization Plate Kit, 96-wells | Applied Biosystems | 10 | Cat No: A1051001 |
 | NovaSeq 6000 SP Reagent Kit v1.5 (500 cycles) | Includes one SP flow cell, one buffer cartridge, one cluster cartridge, and one sequencing cartridge to support a 500-cycle run on the NovaSeq 6000 System. | Illumina | 1 | (flow cell) Cat_No:20028402 |
 
@@ -281,7 +281,7 @@ This table breaks down the mixture per plate and per reaction. When running full
 
 **Option A**
 
-1. A 15 μL aliquot of PCR amplicon was purified and normalized using [Cytiva SpeedBead](https://cdn.cytivalifesciences.com/api/public/content/digi-33629-pdf?_gl=1*1wfvssv*_gcl_au*MjQxODMyMzYyLjE3NzM5NDQzNTc.*_ga*MTQ4MDU2MjIwMi4xNzczOTQ0MzU2*_ga_CS9H0CZBWW*czE3NzgxNzkzNjckbzIkZzAkdDE3NzgxNzkzNjckajYwJGwwJGgw*_ga_HDHKGPXE6G*czE3NzgxNzkzNzEkbzQkZzAkdDE3NzgxNzkzNzEkajYwJGwwJGgzNjM4NjE0Njc.) and a magnetic seperator.
+1. A 15 μL aliquot of PCR amplicon was purified and normalized using [Cytiva SpeedBead](https://cdn.cytivalifesciences.com/api/public/content/digi-33629-pdf?_gl=1*1wfvssv*_gcl_au*MjQxODMyMzYyLjE3NzM5NDQzNTc.*_ga*MTQ4MDU2MjIwMi4xNzczOTQ0MzU2*_ga_CS9H0CZBWW*czE3NzgxNzkzNjckbzIkZzAkdDE3NzgxNzkzNjckajYwJGwwJGgw*_ga_HDHKGPXE6G*czE3NzgxNzkzNzEkbzQkZzAkdDE3NzgxNzkzNzEkajYwJGwwJGgzNjM4NjE0Njc.) and a magnetic separator.
 2. Samples were then pooled together by adding 5 μL of each normalized sample to the pool.
 
 **Option B**
